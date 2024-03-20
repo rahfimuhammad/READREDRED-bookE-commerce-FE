@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,700&display=swap');
+
+* {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent; /* transparent with keyword */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* transparent with rgba */
+    -webkit-tap-highlight-color: hsla(0,0,0,0); /* transparent with hsla */
+    -webkit-tap-highlight-color: #00000000; /* transparent with hex with alpha */
+    -webkit-tap-highlight-color: #0000; /* transparent with short hex with alpha */}
+
+a:visited {
+    color: white;}
+
+p {
+    margin: 0%;
+    color: white;}
+
+h3 {
+    color: white;}
+
+input {
+    color: white;}
+
+
+
+
+        

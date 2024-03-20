@@ -1,0 +1,150 @@
+.admin-control-container {
+    height: fit-content;}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 2.5%;
+    width: 97.5%;}
+
+.custom-table::-webkit-scrollbar {
+    height: 4px;}
+       
+.custom-table::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+       
+.custom-table::-webkit-scrollbar-thumb {
+    background-color: rgb(94, 93, 93);
+    border-radius: 2px;}
+
+.table-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 97.5%;}
+
+.custom-table {
+    display: block;
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0px 10px 10px #1d1e23;
+    width: fit-content;
+    max-width: 100%;
+    width: fit-content;
+    border-radius: 5px;
+    white-space: nowrap;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: auto;}
+
+.custom-table thead {
+    background-color: #1d1e23;
+    color: white;}
+
+.custom-table th, .action-th .custom-table td {
+    width: 100%;
+    text-align: start;
+    padding: 0.8rem;}
+
+.custom-table th {
+    border-right: 0.1px solid #34353f;}
+
+.custom-table td {
+    color: white;
+    border-top: 0.1px solid #1d1e23;
+    border-right: 0.1px solid #1d1e23;}
+
+.scrollable-cell {
+    padding: 7px;
+    height: 24px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: auto;
+    cursor: pointer;}
+  
+.scrollable-cell::-webkit-scrollbar {
+    display: none;}
+
+.button-container {
+    padding: 0 0 5px 2.5%;
+    border: none;
+    overflow: auto;
+    height: fit-content;
+    width: 97.5%;}
+
+.nav-button {
+    border-radius: 4px;
+    width: max-content;
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: #1d1e23 ;
+    border: 2px solid #313873;
+    color: white;}
+
+.scrollable-cell span {
+    display: block;
+    height: fit-content;
+    max-width: 200px;
+    overflow-x: scroll;}
+
+.scrollable-cell span::-webkit-scrollbar {
+    display: none}
+
+.action {
+    border-left: 0.1px solid white;
+    position: sticky;}
+
+.action-button {
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;}
+
+.edit-button {
+    background-color: #136813;}
+
+.delete-button {
+    background-color: #ad4b34;}
+
+.icon-page-button {
+    width: 35px;
+    height: 35px;}
+    
+    @media only screen and (max-width: 600px) {
+
+        .custom-table {
+            max-width: 100%;
+            border-radius: 5px;
+            width: 100%;}
+
+        .nav-button {
+            border: 1.5px solid #313873;
+            font-size: 11px;}
+
+        select {
+            font-size: 11px;}
+
+        .scrollable-cell p, th {
+            font-size: 11px;}
+        
+        .icon-page-button {
+            width: 30px;
+            height: 30px;}
+        
+        .handle-page-button-container span {
+            font-size: 15px;}}
+
+    @media only screen and (max-width: 376px) {
+
+        .icon-page-button {
+            width: 25px;
+            height: 25px;}
+    }
+
+    

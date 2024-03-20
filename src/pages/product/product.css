@@ -1,0 +1,91 @@
+.product {
+    position: absolute;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    background-color: #34353f;
+    top: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.product-page-container {
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    background-color: #1d1e23;
+    align-items: center;
+    border-radius: 20px;}
+
+.product-page-image {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.product-page-image img {
+    width: 100%;}
+
+.product-page-description {
+    width: calc(67% - 40px);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;}
+
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+
+.book-title, .book-author, .book-price, .book-description {
+    margin: 0;
+    color: white;
+    text-align: left;}
+
+.handle-cart {
+    display: flex;
+    gap: 5px;}
+
+#add {
+    width: 150px;}
+
+#wish {
+    width: 40px;}
+
+    @media only screen and (max-width: 700px) {
+                
+        .product-page-container {
+            background-color: transparent;}}
+
+    @media only screen and (max-width: 600px) {
+        .product {
+            align-items: flex-start;}
+        
+        .product-page-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: transparent;
+            align-items: flex-start;}
+
+        .product-page-image {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;}
+
+        .product-page-image img {
+            width: auto;
+            height: 45vh;}
+        
+        .product-page-description {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;}
+        
+        .button:hover {
+            background-color: #313873;}}

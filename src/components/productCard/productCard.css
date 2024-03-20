@@ -1,0 +1,90 @@
+.product-card {
+    width: 100%;
+    height: fit-content;
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    border: .2px solid #1d1e23;
+    box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;}
+
+.product-card:hover {
+    scale: 1.01;}
+    
+.image-container {
+    width: 100%;
+    background-color: #1d1e23;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.image-container img {
+    height: 150px;
+    object-fit: contain;}
+
+.stock {
+    padding: 5px 10px;
+    background-color: #1d1e23;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 3px;}
+
+.detail h1 {
+    font-size: 18px;}
+
+.detail h1, .detail p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(15vw - 30.5px);}
+
+@media only screen and (max-width: 1200px) {
+    .product-card {
+        height: fit-content;
+        padding: 0 0 10px 0;
+        gap: 10px;}
+
+    .detail h1, .detail p {
+        max-width: calc(24vw - 32.5px);}
+        
+    .image-container {
+        width: 100%;
+        background-color: #1d1e23;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;}}
+
+@media only screen and (max-width: 900px) {
+        
+    .product-card:hover {
+        scale: 1;}}
+
+@media only screen and (max-width: 600px) {
+
+    .detail h1, .detail p {
+        max-width: calc(50vw - 37px);}
+
+    .product-card {
+        width: 100%;
+        height: fit-content;
+        padding: 0 0 10px 0;
+        box-shadow: 2.5px 2.5px 1.25px 0px rgba(0,0,0,0.4);
+        gap: 10px;}}
+
+@media only screen and (max-width: 400px) {
+        .detail h1 {
+            font-size: 16px;}}

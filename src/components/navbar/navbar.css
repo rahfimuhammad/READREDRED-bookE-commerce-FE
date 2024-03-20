@@ -1,0 +1,39 @@
+.navbar {
+    width: calc(100% - 40px);
+    position: fixed;
+    z-index: 5;
+    height: 60px;
+    background-color: #1d1e23;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between ;}
+
+.navbar h2 {
+    color: white;
+    text-decoration: none;}
+        
+.navigator {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    height: 60px;}
+
+.navigator h3 {
+    color: white;
+    text-decoration: none;}
+
+.home-nav, .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;}
+
+    @media only screen and (max-width: 1024px) {
+        .navbar {
+            width: calc(100% - 40px);
+            padding: 0 20px;}}
+
+    @media only screen and (max-width: 376px) {
+        .navigator {
+            gap: 10px;}}

@@ -1,0 +1,72 @@
+.count-handler {
+    display: flex;
+    gap: 25px;}
+
+.handle-count {
+    width: 20px;
+    padding: 5px;
+    background-color: #313873;
+    color: white;
+    border: none;}
+
+.trash-button {
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ad4b34;
+    color: white;
+    border: none;}
+
+.handle-count:disabled {
+    opacity: .5;}
+
+.btn-count {
+    display: flex;
+    gap: 5px;}
+
+.count-handler input {
+    background-color: #34353f;
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 20px;
+    padding: 5px;}
+    
+.check-out-btn {
+    display: flex;
+    gap: 10px;}
+    
+.check-out-btn button {
+    width: fit-content;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313873;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 200ms ease-in ;}
+    
+.check-out-btn button:hover {
+    background-color: #1d1e23;}
+    
+    @media only screen and (max-width: 900px) {
+    
+    .check-out-btn button:hover {
+        background-color: #313873;}
+        }
+
+    @media only screen and (max-width: 600px) {
+            
+        .button:hover {
+            background-color: #313873;}}
+        
+    
+
+
+

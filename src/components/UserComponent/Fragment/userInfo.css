@@ -1,0 +1,116 @@
+.main-info {
+    width: 65%;
+    height: fit-content;
+    position: relative;
+    padding: 20px 0;
+    z-index: 6;
+    border-bottom: 1px solid #34353f;
+    display: flex;
+    justify-content: center;}
+
+.top-products {
+    display: flex;}
+
+.info-container {
+    position: relative;
+    width: calc(100% - 40px);
+    gap: 10px;
+    padding: 0 20px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);}
+
+.info {
+    width: calc(100% - 10px);
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px 5px;
+    border: 1px solid #313873;}
+
+.info-desc {
+    text-align: center;}
+
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;}
+
+.info-wrapper h3 {
+    font-size: 14px;
+    margin: 0;}
+
+.info-wrapper p {
+    font-size: 13px;
+    margin: 0;}
+
+@media only screen and (max-width: 990px) {
+
+    .main-info {
+        width: calc(100% - 92px);
+        height: fit-content;
+        min-height: fit-content;
+        padding: 20px 0;
+        border-bottom: 1px solid #34353f;
+        z-index: 6;
+        position: relative;
+        display: flex;
+        justify-content: center;}
+
+    .info-container {
+        width: calc(100% - 40px);
+        gap: 10px;
+        padding: 0 20px;
+        border: none;
+        width: calc(100% - 10px);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;}
+
+    .top-products {
+        display: none;}
+
+    .info {
+        width: calc(100% - 10px);
+        border-radius: 10px;
+        padding: 15px 5px;
+        border: 1px solid #313873;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;}
+
+    .info-desc {
+        text-align: center;}
+
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;}}
+
+@media only screen and (max-width: 600px) {
+
+    .main-info {
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: #34353f 1px solid;}
+
+    .info-container {
+        position: relative;
+        padding: 0 5px;
+        border: none;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+        justify-content: space-between;}
+
+    .info {
+        width: calc(100% - 4px);
+        height: fit-content;
+        padding: 10px 0;}
+
+    .info-desc h3, .info-desc p {
+        font-size: 10px;}}
