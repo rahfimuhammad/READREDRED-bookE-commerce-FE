@@ -1,5 +1,4 @@
 import React, { lazy, Suspense } from 'react';
-import './App.css';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { UserProvider } from './context/UserProvider.js';
 import { QueryClient, QueryClientProvider} from '@tanstack/react-query'

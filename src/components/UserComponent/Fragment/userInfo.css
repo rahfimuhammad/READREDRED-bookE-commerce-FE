@@ -114,3 +114,11 @@
 
     .info-desc h3, .info-desc p {
         font-size: 10px;}}
+
+@media only screen and (max-width: 380px) {
+
+    .main-info {
+        display: none;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: #34353f 1px solid;}}

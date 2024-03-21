@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { useUser } from '../../context/UserProvider'
 import ErrorPage from "../error.jsx"
-import Navbar from '../../components/navbar/Navbar.jsx'
+import Navbar from '../../components/Navbar/Navbar.jsx'
 import WishlistList from "../../components/WishlistComponent/WishlistList.jsx"
 import { MainContainer, 
          Title } from '../../styles.js'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { usePage } from '../../hooks/usePage';
-import ProductCard from "../productCard/ProductCard"
+import ProductCard from "../ProductCard/ProductCard"
 import Spinner from "../../components/loading/Spinner"
 import { useGetProducts } from '../../hooks/useFetch'
 import { CaretCircleRight, CaretCircleLeft } from 'phosphor-react'

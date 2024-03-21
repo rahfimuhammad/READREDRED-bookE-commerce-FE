@@ -1,6 +1,6 @@
 import React from 'react'
-import ProductCard from '../../components/productCard/ProductCard'
-import Navbar from '../../components/navbar/Navbar'
+import ProductCard from '../../components/ProductCard/ProductCard'
+import Navbar from '../../components/Navbar/Navbar'
 import Spinner from '../../components/loading/Spinner'
 import { useGetProducts } from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'

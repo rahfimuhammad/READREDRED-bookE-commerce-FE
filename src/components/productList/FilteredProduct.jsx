@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../productCard/ProductCard'
+import ProductCard from '../ProductCard/ProductCard'
 import { usePage } from '../../hooks/usePage';
 import { useGetProducts } from '../../hooks/useFetch'
 import Spinner from '../loading/Spinner'

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./shop.css"
-import Navbar from "../../components/navbar/Navbar";
-import AllProduct from "../../components/productList/AllProduct";
-import FilteredProduct from "../../components/productList/FilteredProduct";
-import SearchBar from "../../components/searchBar/SearchBar";
+import Navbar from "../../components/Navbar/Navbar";
+import AllProduct from "../../components/ProductList/AllProduct";
+import FilteredProduct from "../../components/ProductList/FilteredProduct";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import { SelectContainer,
          Select} from "../../styles"; 
 import Footer from "../../components/Footer/Footer";

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Banner from "../../assets/banner.png"
 import { useDeleteData } from '../../hooks/useDelete.js';
 import { useUser } from "../../context/UserProvider.js";
@@ -6,22 +6,16 @@ import { useGetProducts } from "../../hooks/useFetch.js"
 import { useNavigate } from 'react-router-dom'
 import "./userComponent.css"
 import Profile from "../../assets/profile.png"
-import ResetPasswordForm from './Fragment/ResetPasswordForm.jsx'
-import ResetProfileForm from './Fragment/ResetProfileForm.jsx'
 import UserInfo from './Fragment/UserInfo.jsx';
 import TopProducts from './Fragment/TopProducts.jsx';
 import { SignOut,
          CalendarCheck } from 'phosphor-react'
-import { ModalClose, 
-         Modal,
-         ButtonProfile } from '../../styles.js';
+import { ButtonProfile } from '../../styles.js';
 
-const ProfilePage = () => {
+const ProfilePage = ({ setEditProfile, setPassReset }) => {
 
     const {token, deleteSession} = useUser()
     const {deleteData} = useDeleteData()
-    const [passReset, setPassReset] = useState(false)
-    const [editProfile, setEditProfile] = useState(false)
     const navigate = useNavigate()
     const user = useGetProducts(`http://localhost:2000/users/${token}`)
     const data = user?.data
@@ -31,11 +25,6 @@ const ProfilePage = () => {
         await deleteData('http://localhost:2000/logout')
         deleteSession()
         navigate('/')
-    }
-
-    const closeModal = () => {
-        
-        return passReset? setPassReset(!passReset) : setEditProfile(!editProfile)
     }
 
   return (
@@ -53,10 +42,10 @@ const ProfilePage = () => {
                     <div className="profile-pict-and-button">
                         <img src={Profile} style={{borderRadius: "50%"}}/>
                         <div className="button-profile-container">
-                            <ButtonProfile onClick={() => setEditProfile(!editProfile)}>
+                            <ButtonProfile onClick={() => setEditProfile(prevState => !prevState)}>
                                 Reset Profile
                             </ButtonProfile>
-                            <ButtonProfile onClick={() => setPassReset(!passReset)}>
+                            <ButtonProfile onClick={() => setPassReset(prevState => !prevState)}>
                                 Reset Password
                             </ButtonProfile>
                         </div>
@@ -74,14 +63,6 @@ const ProfilePage = () => {
                 <TopProducts/>
             </div>
             <UserInfo data={data}/>
-            {editProfile && <Modal>
-                <ModalClose onClick={() => setEditProfile(!editProfile)}></ModalClose>
-                <ResetProfileForm handleReset={closeModal}/>
-            </Modal>}
-            {passReset && <Modal>
-                <ModalClose onClick={() => setPassReset(!passReset)}></ModalClose>
-                <ResetPasswordForm handleReset={closeModal}/>
-            </Modal>}
         </div>
   )
 }

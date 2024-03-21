@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useUser } from '../../context/UserProvider'
 import { usePostData } from '../../hooks/usePost';
 import { useNavigate } from "react-router-dom";
-import Navbar from '../../components/navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 import Logo from "../../assets/logo.png"
 import { ButtonAction, 
          Input, 

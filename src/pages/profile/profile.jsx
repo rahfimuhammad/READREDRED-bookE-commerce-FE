@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useUser } from "../../context/UserProvider";
 import { useNavigate } from 'react-router-dom';
 import ErrorPage from "../error.jsx"
+import ResetPasswordForm from '../../components/UserComponent/Fragment/ResetPasswordForm.jsx';
+import ResetProfileForm from '../../components/UserComponent/Fragment/ResetProfileForm.jsx';
 import ProfileComponent from '../../components/UserComponent/ProfileComponent.jsx';
 import CartList from "../../components/CartComponent/CartList.jsx"
 import WishlistList from "../../components/WishlistComponent/WishlistList.jsx"
@@ -16,13 +18,17 @@ import { MainAdmin,
          Tab,
          TabLabel,
          TabInfo, 
-         PhosphorIcon} from '../../styles.js'
+         PhosphorIcon,
+         Modal,
+         ModalClose} from '../../styles.js'
 
 const ProfileUser = () => {
 
     const {token} = useUser()
     const navigate = useNavigate()
     const [tab, setTab] = useState(0)
+    const [passReset, setPassReset] = useState(false)
+    const [editProfile, setEditProfile] = useState(false)
 
     if (!token) {
         return <ErrorPage />;
@@ -57,6 +63,11 @@ const ProfileUser = () => {
         )
       }
 
+      const closeModal = () => {
+        
+        return passReset? setPassReset(prevState => !prevState) : setEditProfile(prevState => !prevState)
+    }
+
       const tabs = [
         ProfileComponent,
         CartList,
@@ -77,16 +88,29 @@ const ProfileUser = () => {
 
   return (
     <MainAdmin>
-        <NavbarProfile>
+        <NavbarProfile style={{zIndex: "10"}}>
                 <img onClick={() => navigate("/")} style={{height: "40px", cursor: "pointer"}} src={Logo} alt="logo" />
         </NavbarProfile>
-        <Sidebar>
+        <Sidebar style={{zIndex: "9"}}>
             {TabMenu()}
         </Sidebar>
         <AdminContainer>
           <Title><p>Your {tabTitle}</p><hr/></Title>
-          <TabBody />
+          <TabBody 
+            passReset={passReset}
+            setPassReset={setPassReset}
+            editProfile={editProfile}
+            setEditProfile={setEditProfile}
+          />
         </AdminContainer>
+        {editProfile && <Modal style={{zIndex: "11"}}>
+          <ModalClose onClick={() => setEditProfile(!editProfile)}></ModalClose>
+          <ResetProfileForm handleReset={closeModal}/>
+        </Modal>}
+        {passReset && <Modal style={{zIndex: "11"}}>
+          <ModalClose onClick={() => setPassReset(!passReset)}></ModalClose>
+          <ResetPasswordForm handleReset={closeModal}/>
+        </Modal>}
     </MainAdmin>
   )
 }

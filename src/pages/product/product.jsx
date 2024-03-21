@@ -9,7 +9,7 @@ import { formatCurrency } from "../../function/function"
 import "./product.css"
 import 'react-loading-skeleton/dist/skeleton.css'
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from '../../components/navbar/Navbar'
+import Navbar from '../../components/Navbar/Navbar'
 import Skeleton from 'react-loading-skeleton'
 import { Heart } from 'phosphor-react'
 import { ToastContainer } from 'react-toastify';
